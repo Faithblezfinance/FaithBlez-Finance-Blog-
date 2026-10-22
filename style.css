@@ -1,0 +1,284 @@
+/* GENERAL SETTINGS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #263447;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #071b3a;
+}
+
+.logo span {
+  color: #2783d8;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a {
+  color: #071b3a;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #2783d8;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 80px 8%;
+  background: linear-gradient(135deg, #071b3a, #123f73);
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: #2783d8;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+  color: #9bd2ff;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 600px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 5px 8px 5px 0;
+  background: #2783d8;
+  color: #ffffff;
+  border: 2px solid #2783d8;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #165da4;
+  border-color: #165da4;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #ffffff;
+}
+
+/* CONTENT SECTIONS */
+.section {
+  padding: 75px 8%;
+}
+
+.section h2 {
+  font-size: 34px;
+  color: #071b3a;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  color: #123f73;
+  margin-bottom: 12px;
+}
+
+.section > p {
+  max-width: 800px;
+  margin-bottom: 16px;
+}
+
+/* SERVICES AND BLOG CARDS */
+.services {
+  background: #f3f7fc;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e0e8f2;
+  box-shadow: 0 5px 18px rgba(7, 27, 58, 0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #071b3a;
+  margin-bottom: 12px;
+}
+
+.category {
+  color: #2783d8;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* CONTACT FORM */
+.contact {
+  background: #ffffff;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin-top: 25px;
+}
+
+#contact-form label {
+  font-weight: bold;
+  color: #071b3a;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: 2px solid #2783d8;
+  border-color: #2783d8;
+}
+
+#contact-form button {
+  align-self: flex-start;
+}
+
+#form-status {
+  margin-top: 15px;
+  color: #123f73;
+}
+
+/* FOOTER */
+footer {
+  background: #071b3a;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 8%;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 70px 7%;
+  }
+
+  .section {
+    padding: 55px 7%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .logo {
+    font-size: 21px;
+  }
+
+  nav {
+    gap: 8px 13px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    margin-bottom: 10px;
+  }
+}
